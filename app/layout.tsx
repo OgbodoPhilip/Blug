@@ -11,7 +11,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Blug",
-  description: "Ablog website for recent news",
+  description: "Ablog website for recent tech news",
 };
 
 export default function RootLayout({

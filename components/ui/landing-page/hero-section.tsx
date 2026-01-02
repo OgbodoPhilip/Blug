@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Badge } from "../badge";
 import { Button } from "../button";
-import { ArrowRight, SparklesIcon } from "lucide-react";
+import { ArrowRight, EyeClosedIcon, RocketIcon, SparklesIcon, UsersIcon } from "lucide-react";
 import { AuroraText } from "../aurora-text";
+import StatsCard from "./stats-card";
 
 
 const LiveBadge = () => {
@@ -17,6 +18,13 @@ const LiveBadge = () => {
     </Badge>
   );
 }
+
+
+const statsData = [
+    {icon:RocketIcon, value:"10K+", label:"Projects Shared"},
+    {icon:UsersIcon, value:"5K+", label:"Active Users"},
+    {icon:EyeClosedIcon , value:"500+", label:"Daily Visits"},
+]
 
 export default function HeroSection() {
   return (
@@ -37,6 +45,12 @@ A Community platform for sharing and discovering the latest news and trends on v
     <Button asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/submit"><SparklesIcon className="size-5"/>Share Your Project</Link></Button>
     <Button variant='secondary' asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/explore">Explore Projects<ArrowRight size-5/></Link></Button>
 </div>
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-2xl">
+
+    {statsData.map((stat, index) => (
+        <StatsCard key={stat.label} icon={stat.icon} value={stat.value} label={stat.label}/>
+    ))}
+    </div>
 </div>
 </div>
     </section>
