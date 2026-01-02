@@ -33,7 +33,7 @@ export default function FeaturedProduct() {
      
       <BorderBeam duration={6} size={50} />
        <BorderBeam duration={6} size={50} />
-        <BorderBeam duration={4} size={5} />
+       
        
     </Link>
         </div>
