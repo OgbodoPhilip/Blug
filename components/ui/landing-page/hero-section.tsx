@@ -25,7 +25,7 @@ export default function HeroSection() {
             <div className="flex flex-col items-center justify-center lg:py-24 py-12 text-center">
 <LiveBadge/>
       
-     <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-light mb-6 max-w-5xl"> Stay <AuroraText>Updated</AuroraText> with all the Trending information across the <AuroraText>Globe</AuroraText></h1>
+     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-light mb-6 max-w-5xl"> Stay <AuroraText>Updated</AuroraText> with all the Trending information across the <AuroraText>Globe</AuroraText></h1>
     
 <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
 A Community platform for sharing and discovering the latest news and trends on various topics including technology, health, entertainment, sports, and more, we've got you covered. 
