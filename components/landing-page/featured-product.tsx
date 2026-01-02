@@ -10,7 +10,7 @@ const FeaturedProducts = [
     id: 1,
     name: "Innovative Gadget",
     description:
-      "Experience the future with our latest innovative gadget that combines cutting-edge technology with sleek design.",
+      "Experience the absolute future with our latest innovative gadget that combines cutting-edge technology with sleek design.",
     tags: ["Tech", "Gadget"],
     votes: 250,
     isFeatured: true,
