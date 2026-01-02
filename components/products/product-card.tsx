@@ -24,7 +24,7 @@ export default function ProductCard({product}:{product:Product}) {
                 <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.name}</CardTitle>
                 {
                     product.isFeatured && <Badge >
-                   Featured
+                   Featurede
                     </Badge>
                 }
                 </div>
