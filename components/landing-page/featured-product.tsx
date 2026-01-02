@@ -23,19 +23,10 @@ export default function FeaturedProduct() {
       <div className="wrapper">
         <div className="flex items-center justify-between mb-8 ">
           <SectionHeader title="Featured Today"  Icon={StarIcon} description="Discover the latest projects and innovations."/>
-          {/* <Button variant="outline" asChild className="rounded-2xl hidden sm:flex"><Link href="/explore">View All<ArrowRight className="size-4 "/></Link>
+          <Button variant="outline" asChild className="rounded-2xl hidden sm:flex"><Link href="/explore">View All<ArrowRight className="size-4 "/></Link>
          
-          </Button> */}
+          </Button>
 
-           <Link href='/sand' className="relative rounded-2xl overflow-hidden px-6 py-2 border-1" >
-           
-      Buy Now
-     
-      <BorderBeam duration={6} size={50} />
-       <BorderBeam duration={6} size={50} />
-       
-       
-    </Link>
         </div>
         {/* <div className="grid-wrapper">
          
