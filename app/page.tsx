@@ -1,11 +1,11 @@
-
-import HeroSection from "@/components/ui/landing-page/hero-section";
+import FeaturedProduct from "@/components/landing-page/featured-product";
+import HeroSection from "@/components/landing-page/hero-section";
 
 export default function Home() {
   return (
     <div>
-     
-<HeroSection/>
+      <HeroSection />
+      <FeaturedProduct />
     </div>
-  )
+  );
 }
