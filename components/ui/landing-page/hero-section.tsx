@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Badge } from "../badge";
 import { Button } from "../button";
-import { ArrowRight, EyeClosedIcon, RocketIcon, SparklesIcon, UsersIcon } from "lucide-react";
+import { ArrowRight, Eye, EyeClosedIcon, Pen, RocketIcon, SparklesIcon, UsersIcon } from "lucide-react";
 import { AuroraText } from "../aurora-text";
 import StatsCard from "./stats-card";
 
@@ -23,7 +23,8 @@ const LiveBadge = () => {
 const statsData = [
     {icon:RocketIcon, value:"10K+", label:"Projects Shared"},
     {icon:UsersIcon, value:"5K+", label:"Active Users"},
-    {icon:EyeClosedIcon , value:"500+", label:"Daily Visits"},
+    {icon:Eye , value:"500+", label:"Daily Visits"},
+    {icon:Pen , value:"3000+", label:"Positive Reviews"},
 ]
 
 export default function HeroSection() {
@@ -42,10 +43,10 @@ A Community platform for sharing and discovering the latest news and trends on v
 </p>
 
 <div className="flex flex-col sm:flex-row gap-4 mb-16">
-    <Button asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/submit"><SparklesIcon className="size-5"/>Share Your Project</Link></Button>
-    <Button variant='secondary' asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/explore">Explore Projects<ArrowRight size-5/></Link></Button>
+    <Button asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/submit"><SparklesIcon size='lg'/>Share Your Project</Link></Button>
+    <Button variant='secondary' asChild size='lg' className="text-base px-8 shadow-2xl rounded-2xl"><Link href="/explore">Explore Projects<ArrowRight size='lg'/></Link></Button>
 </div>
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-2xl">
+<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full max-w-2xl">
 
     {statsData.map((stat, index) => (
         <StatsCard key={stat.label} icon={stat.icon} value={stat.value} label={stat.label}/>
