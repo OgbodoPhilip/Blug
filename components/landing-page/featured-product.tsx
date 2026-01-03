@@ -60,7 +60,7 @@ export default function FeaturedProduct() {
             ))
              
           }
-           
+            
         </div>
       </div>
     </section>
