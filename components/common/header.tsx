@@ -4,6 +4,14 @@ import { CompassIcon, HomeIcon, SparkleIcon, Sparkles, UserIcon } from "lucide-r
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { motion } from "motion/react"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 
 
 
@@ -50,7 +58,27 @@ export default function Header() {
                 </Link>
               </nav>
                 <div className="flex items-center gap-3 ">
-                    {signIn ? ( <>
+
+                     <SignedOut>
+              <SignInButton />
+              <SignUpButton>
+                <button className=" bg-red-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                  Sign Up
+                </button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+                 <Button asChild className="rounded-2xl">
+                        <Link href='/submit'>
+                        <Sparkles className="size-4"/>
+                        Submit Project
+                        </Link>
+
+                    </Button>
+                   
+           <UserButton />
+            </SignedIn>
+                    {/* {signIn ? ( <>
                     <Button asChild className="rounded-2xl">
                         <Link href='/submit'>
                         <Sparkles className="size-4"/>
@@ -69,7 +97,7 @@ export default function Header() {
                     <Button  className="rounded-2xl" >Sign Up</Button>
                         </>
                     )}
-                   
+                    */}
 
 
 

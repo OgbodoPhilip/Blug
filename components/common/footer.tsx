@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import { gsap } from 'gsap';
 import { Github, Twitter, Linkedin, ArrowUpRight, Send, CheckCircle2, ChevronUp } from 'lucide-react';
+import { AuroraText } from '../ui/aurora-text';
 
 export default function Footer() {
   const [subscribed, setSubscribed] = useState(false);
@@ -122,7 +123,9 @@ export default function Footer() {
             transition={{ delay: 0.3 }}
             className="md:col-span-5"
           >
-            <h4 className="font-semibold mb-4 text-xs uppercase tracking-[0.2em] text-foreground/50">Stay in the loop</h4>
+            <h4 className="font-semibold mb-4 text-xs uppercase tracking-[0.2em] text-foreground/50">
+            <AuroraText>Subscribe to our Newsletter</AuroraText>
+            </h4>
             <div className="relative">
               {subscribed ? (
                 <motion.div 

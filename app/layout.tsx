@@ -3,6 +3,15 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+import { Clapperboard } from "lucide-react";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -22,6 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
         className={`${outfit.className} `}
@@ -31,5 +41,6 @@ export default function RootLayout({
         <Footer/>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
