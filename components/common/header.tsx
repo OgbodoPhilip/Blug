@@ -18,7 +18,7 @@ import {
 const Logo = () => {
     // Replace with actual authentication logic
    return (
-     <Link href="/" className="flex items-center gap-1 group ">
+    <Link href="/" className="flex items-center gap-1 group ">
     <motion.div 
      initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 , transition: { delay: 0.1,duration: 0.3}}}
@@ -33,7 +33,7 @@ const Logo = () => {
             whileInView={{ opacity: 1, y: 0 , transition: { delay: 0.1,duration: 0.3}}}
            
           >
-            <span className="text-2xl font-bold tracking-tighter mb-4">Blug<span className="text-primary">.</span></span>
+            <span className="text-2xl font-bold text-black tracking-tighter mb-4">Blug<span className="text-primary">.</span></span>
           
           </motion.span>
     </Link>
@@ -62,19 +62,19 @@ export default function Header() {
                      <SignedOut>
               <SignInButton />
               <SignUpButton>
-                <button className=" bg-red-400 text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-                  Sign Up
-                </button>
+                <Button className="rounded-2xl">Sign up</Button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-                 <Button asChild className="rounded-2xl">
-                        <Link href='/submit'>
+                <motion.div>
+                     <Button asChild className="rounded-2xl">
+                        <Link href='/submitproject'>
                         <Sparkles className="size-4"/>
                         Submit Project
                         </Link>
 
                     </Button>
+                </motion.div>
                    
            <UserButton />
             </SignedIn>
