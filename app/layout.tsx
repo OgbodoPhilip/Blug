@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from 'react'
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/header";
@@ -38,7 +39,9 @@ export default function RootLayout({
       >
         <Header/>
         {children}
-        <Footer/>
+      <Suspense fallback={<footer className="h-20" />}>
+          <Footer />
+        </Suspense>
       </body>
     </html>
     </ClerkProvider>

@@ -63,7 +63,7 @@ export default function HeroSection() {
               size="lg"
               className="text-base px-8 shadow-2xl rounded-2xl"
             >
-              <Link href="/submit">
+              <Link href="/submitproject">
                 <SparklesIcon size="lg" />
                 Share Your Project
               </Link>
