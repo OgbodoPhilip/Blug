@@ -78,30 +78,7 @@ export default function Header() {
                    
            <UserButton />
             </SignedIn>
-                    {/* {signIn ? ( <>
-                    <Button asChild className="rounded-2xl">
-                        <Link href='/submit'>
-                        <Sparkles className="size-4"/>
-                        Submit Project
-                        </Link>
-
-                    </Button>
-                    <Button variant='ghost' className="rounded-full size-8 p-0">
-                        <UserIcon className="size-5"/>
-
-                    </Button>
-                    </>):(
-                        <>
-                        
-                    <Button variant="outline" className="rounded-2xl">Sign In</Button>
-                    <Button  className="rounded-2xl" >Sign Up</Button>
-                        </>
-                    )}
-                    */}
-
-
-
-
+                 
 
                 </div>
                 
