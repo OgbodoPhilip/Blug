@@ -12,9 +12,21 @@ const RecentlyLaunched = [
     name: "Innovative Gadget",
     description:
       "Experience the absolute future with our latest innovative gadget that combines cutting-edge technology with sleek design.",
+    slug: "innovative-gadget",
+    tagline: "The future of technology",
+    websiteUrl: "https://example.com",
     tags: ["Tech", "Gadget"],
-    votes: 250,
+    voteCount: 250,
     isFeatured: true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    launchDate: new Date(),
+    logoUrl: null,
+    userId: "",
+    organizationId: null,
+    approvedAt: new Date(),
+    status: "approved",
+    submittedBy: "",
   }, 
 ];
 
