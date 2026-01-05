@@ -4,11 +4,16 @@ import { Badge } from "../ui/badge";
 import { BorderBeam } from "../ui/border-beam";
 import { ChevronDownIcon, ChevronUpIcon, StarIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import { products } from "@/db/schema";
-import { InferSelectModel } from "drizzle-orm";
 
- 
-type Product = InferSelectModel<typeof products>;
+interface Product {
+    id:number;
+    name:string;
+    description:string;
+    tags:string[];
+    votes:number;
+    isFeatured:boolean;
+}
+
  
 export default function ProductCard({product}:{product:Product}) {
   return (
@@ -20,7 +25,7 @@ export default function ProductCard({product}:{product:Product}) {
                         <div className="flex items-center gap-2">
                 <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.name}</CardTitle>
                 {
-                    product.voteCount > 10 && <Badge className="gap-1 bg-primary text-primary-foreground" >
+                    product.isFeatured && <Badge className="gap-1 bg-primary text-primary-foreground" >
                         <StarIcon className="size-3 fill-current "/>
                    Featured
                     </Badge>
@@ -37,7 +42,7 @@ export default function ProductCard({product}:{product:Product}) {
                     </Button>
                     <span className="text-sm font-semibold transition-colors text-foreground">
 
-                        {product.voteCount}
+                        10
                     </span>
                      <Button variant="ghost" size="icon-sm" className="h-8 w-8 text-primary hover:text-destructive rounded-xl">
                     <ChevronDownIcon className="size-5"/>
@@ -56,7 +61,7 @@ export default function ProductCard({product}:{product:Product}) {
             </CardHeader>
             <CardFooter>
                  <div className="flex items-center gap-2">
-                    {product.tags?.map((tag)=>(
+                    {product.tags.map((tag)=>(
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                     ))}
                  </div>

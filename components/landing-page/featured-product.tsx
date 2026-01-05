@@ -4,22 +4,22 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { BorderBeam } from "../ui/border-beam";
 import ProductCard from "../products/product-card";
-import { getFeayturedProducts } from "@/lib/products/product-select";
 
-// const FeaturedProducts = [
-//   {
-//     id: 1,
-//     name: "Innovative Gadget",
-//     description:
-//       "Experience the absolute future with our latest innovative gadget that combines cutting-edge technology with sleek design.",
-//     tags: ["Tech", "Gadget"],
-//     votes: 250,
-//     isFeatured: true,
-//   },
-// ];
+
+const FeaturedProducts = [
+  {
+    id: 1,
+    name: "Innovative Gadget",
+    description:
+      "Experience the absolute future with our latest innovative gadget that combines cutting-edge technology with sleek design.",
+    tags: ["Tech", "Gadget"],
+    votes: 250,
+    isFeatured: true,
+  },
+];
 
 export default async function FeaturedProduct() {
-  const FeaturedProducts = await getFeayturedProducts();
+
   return (
     <section className="py-12 bg-muted/20">
       <div className="wrapper">
