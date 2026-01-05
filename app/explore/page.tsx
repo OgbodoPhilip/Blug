@@ -80,7 +80,7 @@ const ProductShowcase = () => {
                   {product.description}
                 </p>
                 
-                <button className="mt-6 w-full py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-blue-600 transition-colors">
+                <button className="mt-6 w-full py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary transition-colors">
                   View Details
                 </button>
               </div>
